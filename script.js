@@ -1,0 +1,235 @@
+﻿const workflowSteps = [
+  {
+    name: "資料蒐集",
+    agent: "採訪全紀鹿",
+    insight: "協助整理訪談材料、逐字稿與背景資訊，減少前處理時間。"
+  },
+  {
+    name: "準備題目方向",
+    agent: "議題發想雞",
+    insight: "協助找趨勢、補盲點、提出可能角度，但最後選題仍由人判斷。"
+  },
+  {
+    name: "寫稿",
+    agent: "論點分析獅",
+    insight: "協助檢查論點結構與段落推進，不等於直接生成可發布新聞。"
+  },
+  {
+    name: "核稿",
+    agent: "數據檢查猿",
+    insight: "協助比對數字、資料來源與論證一致性，降低人工反覆查核成本。"
+  },
+  {
+    name: "改稿",
+    agent: "標題超吸鯨",
+    insight: "協助標題、開場與可讀性優化，讓內容更適合數位通路。"
+  },
+  {
+    name: "審稿",
+    agent: "人工審核閘門",
+    insight: "AI 可以輔助，但發布前仍需編輯與記者負責查證、判斷與修訂。"
+  },
+  {
+    name: "發通路",
+    agent: "AEO 流量密馬",
+    insight: "協助 SEO／AEO 建議，讓內容更可能被搜尋與答案引擎辨識。"
+  }
+];
+
+function initWorkflowStepper() {
+  const mount = document.getElementById("workflowStepper");
+  const insight = document.getElementById("workflowInsight");
+  if (!mount || !insight) return;
+
+  mount.innerHTML = workflowSteps
+    .map(
+      (step, index) => `
+        <button class="step-button ${index === 0 ? "active" : ""}" data-step="${index}">
+          <span>${index + 1}</span>
+          <span><strong>${step.name}</strong><br />${step.agent}</span>
+        </button>
+      `
+    )
+    .join("");
+
+  insight.textContent = workflowSteps[0].insight;
+
+  mount.addEventListener("click", (event) => {
+    const button = event.target.closest(".step-button");
+    if (!button) return;
+    mount.querySelectorAll(".step-button").forEach((item) => item.classList.remove("active"));
+    button.classList.add("active");
+    insight.textContent = workflowSteps[Number(button.dataset.step)].insight;
+  });
+}
+
+window.addEventListener("load", initWorkflowStepper);
+const pathCopy = {
+  seo: {
+    title: "傳統 SEO 路徑",
+    body: "使用者搜尋，點進網站，媒體取得廣告曝光或訂閱轉換機會。"
+  },
+  aeo: {
+    title: "AEO／AI Answer Engine 路徑",
+    body: "使用者提問，AI 整理答案，媒體可能被引用或摘要，但使用者未必回到原站。"
+  }
+};
+
+function initAeoToggle() {
+  const buttons = document.querySelectorAll(".segmented [data-mode]");
+  const explainer = document.getElementById("pathExplainer");
+  if (!buttons.length || !explainer) return;
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      buttons.forEach((item) => {
+        item.classList.remove("active");
+        item.setAttribute("aria-selected", "false");
+      });
+      button.classList.add("active");
+      button.setAttribute("aria-selected", "true");
+      const copy = pathCopy[button.dataset.mode];
+      explainer.innerHTML = `<h4>${copy.title}</h4><p>${copy.body}</p>`;
+    });
+  });
+}
+
+window.addEventListener("load", initAeoToggle);
+const businessLayers = [
+  {
+    title: "價值創造",
+    status: "已明顯改變",
+    accent: "#0e7c7b",
+    body: "內容供給效率、資料整理、採訪彙整、標題生成、論點檢查與 AI 協作已經被重塑。"
+  },
+  {
+    title: "價值交付",
+    status: "已開始改變",
+    accent: "#c28a24",
+    body: "SEO／AEO、AI 搜尋入口與內容可見度開始改變媒體被看見的方式。"
+  },
+  {
+    title: "價值擷取",
+    status: "尚未證明重組",
+    accent: "#c44732",
+    body: "廣告、訂閱、會員、課程與活動等收入結構，尚無足夠證據顯示已被 AI Hub 實質改寫。"
+  }
+];
+
+function initBusinessLayers() {
+  const mount = document.getElementById("businessLayers");
+  if (!mount) return;
+  mount.innerHTML = businessLayers
+    .map(
+      (layer) => `
+        <article class="layer-card" style="--accent:${layer.accent}">
+          <h3>${layer.title}</h3>
+          <p><strong>${layer.status}</strong></p>
+          <p>${layer.body}</p>
+        </article>
+      `
+    )
+    .join("");
+}
+
+window.addEventListener("load", initBusinessLayers);
+const mythFeedback = {
+  true: "正解：本案核心不是 AI 取代記者，而是 AI 被嵌入採編流程，成為智慧協作平台。",
+  partial: "接近，但還不完整：AI Hub 確實提升效率，但重點是它把多個採編節點制度化。",
+  false: "這正是本報告要拆解的迷思：AI Hub 目前不能被簡化成自動寫稿機或成熟新營收產品。"
+};
+
+const quizItems = [
+  {
+    question: "哪一項最能描述 AI Hub 目前最明確的影響？",
+    options: ["取代記者寫完整新聞", "加速前處理與中介工序", "直接成為主要收入來源"],
+    answer: 1
+  },
+  {
+    question: "公司官方 AI 與個人 AI 並行，代表什麼？",
+    options: ["組織治理仍在形成中", "公司 AI 已完全失敗", "記者不需要人工審核"],
+    answer: 0
+  },
+  {
+    question: "AEO 可見度提高，最需要避免哪個推論？",
+    options: ["內容可能更容易被答案引擎引用", "搜尋入口正在改變", "引用一定等於變現"],
+    answer: 2
+  }
+];
+
+function updateProgress() {
+  const progress = document.getElementById("readProgress");
+  const height = document.documentElement.scrollHeight - window.innerHeight;
+  const ratio = height > 0 ? window.scrollY / height : 0;
+  progress.style.width = `${Math.min(100, Math.max(0, ratio * 100))}%`;
+}
+
+function initMythQuiz() {
+  const choices = document.querySelectorAll('[data-quiz="myth"] .choice');
+  const feedback = document.getElementById("mythFeedback");
+  choices.forEach((choice) => {
+    choice.addEventListener("click", () => {
+      choices.forEach((item) => item.classList.remove("correct", "wrong"));
+      const value = choice.dataset.correct;
+      choice.classList.add(value === "true" || value === "partial" ? "correct" : "wrong");
+      feedback.textContent = mythFeedback[value];
+    });
+  });
+}
+
+function initGovernanceRange() {
+  const range = document.getElementById("governanceRange");
+  const value = document.getElementById("rangeValue");
+  if (!range || !value) return;
+  range.addEventListener("input", () => {
+    const company = Number(range.value);
+    value.textContent = `公司 AI ${company}% / 個人 AI ${100 - company}%`;
+  });
+}
+
+function initQuiz() {
+  const mount = document.getElementById("quizMount");
+  const check = document.getElementById("checkQuiz");
+  const feedback = document.getElementById("quizFeedback");
+  mount.innerHTML = quizItems
+    .map(
+      (item, index) => `
+        <fieldset class="quiz-item">
+          <p>${index + 1}. ${item.question}</p>
+          <div class="quiz-options">
+            ${item.options
+              .map(
+                (option, optionIndex) => `
+                  <label>
+                    <input type="radio" name="quiz-${index}" value="${optionIndex}" />
+                    <span>${option}</span>
+                  </label>
+                `
+              )
+              .join("")}
+          </div>
+        </fieldset>
+      `
+    )
+    .join("");
+
+  check.addEventListener("click", () => {
+    let score = 0;
+    quizItems.forEach((item, index) => {
+      const selected = document.querySelector(`input[name="quiz-${index}"]:checked`);
+      if (selected && Number(selected.value) === item.answer) score += 1;
+    });
+    feedback.textContent =
+      score === quizItems.length
+        ? "判斷清楚：你已分清流程改善、治理形成、入口改變與收入結構重組。"
+        : `你答對 ${score} / ${quizItems.length} 題。再回到上方三個證據層，檢查哪些推論還太快。`;
+  });
+}
+
+window.addEventListener("scroll", updateProgress, { passive: true });
+window.addEventListener("load", () => {
+  updateProgress();
+  initMythQuiz();
+  initGovernanceRange();
+  initQuiz();
+});

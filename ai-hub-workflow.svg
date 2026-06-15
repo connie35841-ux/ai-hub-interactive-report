@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 560" role="img" aria-labelledby="title desc">
+  <title id="title">AI Hub 智慧採編全流程圖</title>
+  <desc id="desc">七個採編工序與各自對應的 AI Hub Agent。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2 2 L10 6 L2 10 Z" fill="#0e7c7b"/>
+    </marker>
+  </defs>
+  <rect width="980" height="560" rx="20" fill="#fbfaf6"/>
+  <text x="490" y="48" text-anchor="middle" font-family="Microsoft JhengHei, Arial" font-size="28" font-weight="800" fill="#17212b">AI Hub 智慧採編全流程</text>
+  <g font-family="Microsoft JhengHei, Arial">
+    <path d="M118 188 H850" stroke="#0e7c7b" stroke-width="5" marker-end="url(#arrow)" fill="none"/>
+    <g>
+      <circle cx="110" cy="188" r="34" fill="#0e7c7b"/><text x="110" y="196" text-anchor="middle" fill="#fff" font-size="22" font-weight="800">1</text>
+      <text x="110" y="112" text-anchor="middle" fill="#17212b" font-size="19" font-weight="800">資料蒐集</text>
+      <rect x="54" y="228" width="112" height="52" rx="8" fill="#e5ead9" stroke="#9daf99"/><text x="110" y="260" text-anchor="middle" fill="#17212b" font-size="16" font-weight="700">採訪全紀鹿</text>
+    </g>
+    <g>
+      <circle cx="232" cy="188" r="34" fill="#0e7c7b"/><text x="232" y="196" text-anchor="middle" fill="#fff" font-size="22" font-weight="800">2</text>
+      <text x="232" y="100" text-anchor="middle" fill="#17212b" font-size="19" font-weight="800">準備題目</text><text x="232" y="124" text-anchor="middle" fill="#17212b" font-size="19" font-weight="800">方向</text>
+      <rect x="176" y="228" width="112" height="52" rx="8" fill="#dceff2" stroke="#8bb8c0"/><text x="232" y="260" text-anchor="middle" fill="#17212b" font-size="16" font-weight="700">議題發想雞</text>
+    </g>
+    <g>
+      <circle cx="354" cy="188" r="34" fill="#0e7c7b"/><text x="354" y="196" text-anchor="middle" fill="#fff" font-size="22" font-weight="800">3</text>
+      <text x="354" y="112" text-anchor="middle" fill="#17212b" font-size="19" font-weight="800">寫稿</text>
+      <rect x="298" y="228" width="112" height="52" rx="8" fill="#fff2d7" stroke="#d0a34a"/><text x="354" y="260" text-anchor="middle" fill="#17212b" font-size="16" font-weight="700">論點分析獅</text>
+    </g>
+    <g>
+      <circle cx="476" cy="188" r="34" fill="#0e7c7b"/><text x="476" y="196" text-anchor="middle" fill="#fff" font-size="22" font-weight="800">4</text>
+      <text x="476" y="112" text-anchor="middle" fill="#17212b" font-size="19" font-weight="800">核稿</text>
+      <rect x="420" y="228" width="112" height="52" rx="8" fill="#fde7df" stroke="#d99a8b"/><text x="476" y="260" text-anchor="middle" fill="#17212b" font-size="16" font-weight="700">數據檢查猿</text>
+    </g>
+    <g>
+      <circle cx="598" cy="188" r="34" fill="#0e7c7b"/><text x="598" y="196" text-anchor="middle" fill="#fff" font-size="22" font-weight="800">5</text>
+      <text x="598" y="112" text-anchor="middle" fill="#17212b" font-size="19" font-weight="800">改稿</text>
+      <rect x="542" y="228" width="112" height="52" rx="8" fill="#e6e4f3" stroke="#aaa4ce"/><text x="598" y="260" text-anchor="middle" fill="#17212b" font-size="16" font-weight="700">標題超吸鯨</text>
+    </g>
+    <g>
+      <circle cx="720" cy="188" r="34" fill="#0e7c7b"/><text x="720" y="196" text-anchor="middle" fill="#fff" font-size="22" font-weight="800">6</text>
+      <text x="720" y="112" text-anchor="middle" fill="#17212b" font-size="19" font-weight="800">審稿</text>
+      <rect x="664" y="228" width="112" height="52" rx="8" fill="#f3f6f2" stroke="#a7b6a1"/><text x="720" y="260" text-anchor="middle" fill="#17212b" font-size="16" font-weight="700">人工閘門</text>
+    </g>
+    <g>
+      <circle cx="842" cy="188" r="34" fill="#c44732"/><text x="842" y="196" text-anchor="middle" fill="#fff" font-size="22" font-weight="800">7</text>
+      <text x="842" y="112" text-anchor="middle" fill="#17212b" font-size="19" font-weight="800">發通路</text>
+      <rect x="786" y="228" width="112" height="52" rx="8" fill="#fbe2dd" stroke="#d58d7e"/><text x="842" y="260" text-anchor="middle" fill="#17212b" font-size="16" font-weight="700">AEO 流量密馬</text>
+    </g>
+    <rect x="110" y="374" width="760" height="90" rx="12" fill="#ffffff" stroke="#d9dfdf"/>
+    <text x="490" y="410" text-anchor="middle" fill="#17212b" font-size="22" font-weight="800">變革重點</text>
+    <text x="490" y="444" text-anchor="middle" fill="#526170" font-size="18">把靠經驗與手動切換系統完成的工作，轉為多個 AI 節點協助完成的連續流程。</text>
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" role="img" aria-labelledby="title desc">
+  <title id="title">官方 AI vs 個人 AI 工具治理天平</title>
+  <desc id="desc">公司官方 AI 模板與個人 AI 工具透過人工審核閘門取得平衡。</desc>
+  <rect width="760" height="420" rx="18" fill="#fbfaf6"/>
+  <g font-family="Microsoft JhengHei, Arial" font-weight="800">
+    <line x1="380" y1="112" x2="380" y2="296" stroke="#17212b" stroke-width="8"/>
+    <circle cx="380" cy="102" r="22" fill="#c44732"/>
+    <line x1="176" y1="160" x2="584" y2="160" stroke="#17212b" stroke-width="8" stroke-linecap="round"/>
+    <path d="M176 160 L116 274 H236 Z" fill="#dceff2" stroke="#0e7c7b" stroke-width="4"/>
+    <path d="M584 160 L524 274 H644 Z" fill="#fff2d7" stroke="#c28a24" stroke-width="4"/>
+    <text x="176" y="314" text-anchor="middle" font-size="24" fill="#17212b">公司官方 AI 模板</text>
+    <text x="176" y="346" text-anchor="middle" font-size="16" fill="#526170">標準化、可治理、格式一致</text>
+    <text x="584" y="314" text-anchor="middle" font-size="24" fill="#17212b">個人 AI 工具</text>
+    <text x="584" y="346" text-anchor="middle" font-size="16" fill="#526170">彈性高、靈感強、手感貼近</text>
+    <rect x="286" y="290" width="188" height="54" rx="8" fill="#fde7df" stroke="#c44732" stroke-width="3"/>
+    <text x="380" y="324" text-anchor="middle" font-size="20" fill="#c44732">人工審核閘門</text>
+  </g>
+</svg>

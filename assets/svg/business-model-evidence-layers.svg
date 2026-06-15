@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 560" role="img" aria-labelledby="title desc">
+  <title id="title">商業模式三層證據圖</title>
+  <desc id="desc">價值創造、價值交付與價值擷取三層檢驗。</desc>
+  <rect width="820" height="560" rx="20" fill="#fbfaf6"/>
+  <g font-family="Microsoft JhengHei, Arial">
+    <text x="410" y="50" text-anchor="middle" fill="#17212b" font-size="29" font-weight="800">商業模式三層證據圖</text>
+    <rect x="95" y="96" width="630" height="108" rx="12" fill="#dceff2" stroke="#0e7c7b" stroke-width="4"/>
+    <rect x="95" y="232" width="630" height="108" rx="12" fill="#fff2d7" stroke="#c28a24" stroke-width="4"/>
+    <rect x="95" y="368" width="630" height="108" rx="12" fill="#fde7df" stroke="#c44732" stroke-width="4"/>
+    <text x="132" y="140" fill="#17212b" font-size="24" font-weight="800">價值創造：已明顯改變</text>
+    <text x="132" y="174" fill="#526170" font-size="18">內容供給效率、前處理工序、AI 協作</text>
+    <text x="132" y="276" fill="#17212b" font-size="24" font-weight="800">價值交付：已開始改變</text>
+    <text x="132" y="310" fill="#526170" font-size="18">SEO／AEO、AI 搜尋入口、內容可見度</text>
+    <text x="132" y="412" fill="#17212b" font-size="24" font-weight="800">價值擷取：尚未證明重組</text>
+    <text x="132" y="446" fill="#526170" font-size="18">廣告、訂閱、會員、課程、活動收入結構</text>
+  </g>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">SEO 到 AEO 流量入口轉移圖</title>
+  <desc id="desc">比較傳統搜尋點擊與 AI 答案引擎引用路徑。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2 2 L10 6 L2 10 Z" fill="#f4b45b"/>
+    </marker>
+  </defs>
+  <rect width="960" height="540" rx="20" fill="#223448"/>
+  <g font-family="Microsoft JhengHei, Arial">
+    <text x="480" y="48" text-anchor="middle" fill="#f7fbfa" font-size="28" font-weight="800">SEO 到 AEO：流量入口如何轉移</text>
+    <rect x="58" y="92" width="374" height="340" rx="14" fill="#fbfaf6"/>
+    <rect x="528" y="92" width="374" height="340" rx="14" fill="#fbfaf6"/>
+    <text x="245" y="134" text-anchor="middle" fill="#0e7c7b" font-size="26" font-weight="800">傳統 SEO 路徑</text>
+    <text x="715" y="134" text-anchor="middle" fill="#c44732" font-size="26" font-weight="800">AEO／AI 答案路徑</text>
+    <g fill="#17212b" font-size="18" font-weight="700">
+      <rect x="98" y="176" width="294" height="54" rx="8" fill="#dceff2"/><text x="245" y="210" text-anchor="middle">使用者搜尋</text>
+      <rect x="98" y="268" width="294" height="54" rx="8" fill="#e5ead9"/><text x="245" y="302" text-anchor="middle">點進網站</text>
+      <rect x="98" y="360" width="294" height="54" rx="8" fill="#fff2d7"/><text x="245" y="394" text-anchor="middle">廣告曝光／訂閱轉換</text>
+      <path d="M245 232 V260" stroke="#0e7c7b" stroke-width="4" marker-end="url(#arrow)"/>
+      <path d="M245 324 V352" stroke="#0e7c7b" stroke-width="4" marker-end="url(#arrow)"/>
+      <rect x="568" y="176" width="294" height="54" rx="8" fill="#dceff2"/><text x="715" y="210" text-anchor="middle">使用者提問</text>
+      <rect x="568" y="268" width="294" height="54" rx="8" fill="#fde7df"/><text x="715" y="302" text-anchor="middle">AI 答案整理</text>
+      <rect x="568" y="360" width="294" height="54" rx="8" fill="#e6e4f3"/><text x="715" y="394" text-anchor="middle">媒體被引用或摘要</text>
+      <path d="M715 232 V260" stroke="#c44732" stroke-width="4" marker-end="url(#arrow)"/>
+      <path d="M715 324 V352" stroke="#c44732" stroke-width="4" marker-end="url(#arrow)"/>
+    </g>
+    <rect x="232" y="462" width="496" height="48" rx="8" fill="#c44732"/>
+    <text x="480" y="493" text-anchor="middle" fill="#fff" font-size="22" font-weight="800">被看見 ≠ 被點擊；被引用 ≠ 被變現</text>
+  </g>
+</svg>
